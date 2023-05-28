@@ -10,7 +10,6 @@ int prefix(char *string, char *accept)
         if (isContinue == 1)
             for (int j = 0; accept[j] != '\0'; j++)
             {
-                // printf("%c %d\n", string[i], count);
                 if (string[i] == accept[j])
                 {
                     count++;
