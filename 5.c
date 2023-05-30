@@ -1,7 +1,7 @@
 // Поиск подстроки в строке.
 #include <stdio.h>
 
-int patternSearch(char *string, char *pattern)
+int patternSearch(char* string, char* pattern)
 {
     int matchCount = 0;
     int patlen = 0;
@@ -10,16 +10,12 @@ int patternSearch(char *string, char *pattern)
         patlen++;
     for (int i = 0; string[i] != '\0'; i++)
         slen++;
-    for (int i = 0; string[i] != '\0'; i++)
-    {
+    for (int i = 0; string[i] != '\0'; i++) {
         matchCount = 0;
-        for (int j = 0; pattern[j] != '\0'; j++)
-        {
-            if (string[i + j] == pattern[j])
-            {
+        for (int j = 0; pattern[j] != '\0'; j++) {
+            if (string[i + j] == pattern[j]) {
                 matchCount++;
-            }
-            else
+            } else
                 break;
             if (matchCount == patlen)
                 return i;
@@ -30,8 +26,8 @@ int patternSearch(char *string, char *pattern)
 
 int main()
 {
-    char *string = "romapasha";
-    char *pattern = "mapa";
+    char* string = "romapasha";
+    char* pattern = "mapa";
     int result = patternSearch(string, pattern);
     printf("%d\n", result);
     return 0;

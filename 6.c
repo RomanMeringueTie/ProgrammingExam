@@ -2,11 +2,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-char *numToStr(int number, char *string)
+char* numToStr(int number, char* string)
 {
     int slen = 0;
-    while (number != 0)
-    {
+    while (number != 0) {
         *string = number % 10 + 48;
         number /= 10;
         (string)++;
@@ -26,8 +25,8 @@ char *numToStr(int number, char *string)
 int main()
 {
     int number = 10128;
-    char *string = malloc(100);
-    char *result = numToStr(number, string);
+    char* string = malloc(100);
+    char* result = numToStr(number, string);
     printf("%s\n", result);
     free(string);
     return 0;
